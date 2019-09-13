@@ -1,0 +1,5 @@
+/home/taira/Projects/spring-rabbitmq/src/main/java/com/github/iquee/spring/rabbitmq/Constants.java
+/home/taira/Projects/spring-rabbitmq/src/main/java/com/github/iquee/spring/rabbitmq/SpringRabbitmqApplication.java
+/home/taira/Projects/spring-rabbitmq/src/main/java/com/github/iquee/spring/rabbitmq/listener/RabbitQueueListener.java
+/home/taira/Projects/spring-rabbitmq/src/main/java/com/github/iquee/spring/rabbitmq/producers/DirectDefaultExchangeProducer.java
+/home/taira/Projects/spring-rabbitmq/src/main/java/com/github/iquee/spring/rabbitmq/producers/DirectSpecificExchangeProducer.java

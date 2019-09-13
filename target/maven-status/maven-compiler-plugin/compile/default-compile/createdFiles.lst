@@ -1,0 +1,5 @@
+com/github/iquee/spring/rabbitmq/producers/DirectDefaultExchangeProducer.class
+com/github/iquee/spring/rabbitmq/producers/DirectSpecificExchangeProducer.class
+com/github/iquee/spring/rabbitmq/listener/RabbitQueueListener.class
+com/github/iquee/spring/rabbitmq/Constants.class
+com/github/iquee/spring/rabbitmq/SpringRabbitmqApplication.class

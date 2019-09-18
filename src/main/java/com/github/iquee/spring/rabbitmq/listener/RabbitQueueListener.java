@@ -11,12 +11,12 @@ public class RabbitQueueListener {
 
     @RabbitListener(queues = Constants.QUEUE_NAME_TO_DEFAULT_EXCHANGE)
     public void defaultListen(String msg) {
-        System.out.println("Message from default exchange ("+LocalDateTime.now()+"): " + msg);
+        System.out.println("Message from default exchange " + msg);
     }
 
     @RabbitListener(queues = Constants.QUEUE_NAME_TO_EXCHANGE_1)
     public void listenSpecificExchange(String msg){
-        System.out.println("Message from specific exchange ("+LocalDateTime.now()+"):  " + msg);
+        System.out.println("Message from specific exchange " + msg);
     }
 
 }

@@ -10,6 +10,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+
 @Component
 public class DirectDefaultExchangeProducer implements CommandLineRunner {
 
@@ -17,11 +19,11 @@ public class DirectDefaultExchangeProducer implements CommandLineRunner {
     public void run(String ...args) throws Exception {
         ConnectionFactory connectionFactory = new CachingConnectionFactory();
         AmqpTemplate template = new RabbitTemplate(connectionFactory);
-        template.convertAndSend(Constants.QUEUE_NAME_TO_DEFAULT_EXCHANGE, "Using Plain Java to send message");
+        template.convertAndSend(Constants.QUEUE_NAME_TO_DEFAULT_EXCHANGE, "Using Plain Java to send message at " + LocalDateTime.now());
     }
 
     @Bean
     public ApplicationRunner runner(AmqpTemplate template) {
-        return args -> template.convertAndSend(Constants.QUEUE_NAME_TO_DEFAULT_EXCHANGE, "Using Spring Boot Auto Configuration and an Async POJO Listener to send message");
+        return args -> template.convertAndSend(Constants.QUEUE_NAME_TO_DEFAULT_EXCHANGE, "Using Spring Boot Auto Configuration and an Async POJO Listener to send message at " + LocalDateTime.now());
     }
 }

@@ -14,12 +14,10 @@ import org.springframework.stereotype.Component;
 public class DirectDefaultExchangeProducer implements CommandLineRunner {
 
     @Override
-    public void run(String...args) throws Exception {
+    public void run(String ...args) throws Exception {
         ConnectionFactory connectionFactory = new CachingConnectionFactory();
         AmqpTemplate template = new RabbitTemplate(connectionFactory);
         template.convertAndSend(Constants.QUEUE_NAME_TO_DEFAULT_EXCHANGE, "Using Plain Java to send message");
-        // receiving
-        // String foo = (String) template.receiveAndConvert("myqueue");
     }
 
     @Bean
